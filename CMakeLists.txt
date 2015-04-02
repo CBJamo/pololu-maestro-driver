@@ -79,7 +79,8 @@ add_library(maestro_driver_nodelet
 add_executable(maestro_driver_node src/maestro_driver_node.cpp)
 
 ## Add dependencies to the executable
-# add_dependencies(pololu_maestro_driver_node ${PROJECT_NAME})
+add_dependencies(maestro_driver_node ${PROJECT_NAME}_gencfg)
+add_dependencies(maestro_driver_nodelet ${PROJECT_NAME}_gencfg)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(maestro_driver
